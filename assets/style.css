@@ -116,9 +116,11 @@ a {
 #testimonial .testimonial-carousel .owl-item.active.center .item .testimonial-item{
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
 }
+
 #testimonial .testimonial-carousel .owl-item .testimonial-item:hover {
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
   border: 1px solid #ffffff;
+  animation: borderAnimation 3s infinite;
 }
 
 #testimonial .testimonial-carousel .owl-item .testimonial-item h6 {
@@ -130,13 +132,17 @@ a {
   display: none
 }
 
-/* Animations */
 .testimonial-carousel .owl-item:nth-child(even) .item {
   animation: slideUp 9s infinite; 
 }
 
 .testimonial-carousel .owl-item:nth-child(odd) .item {
   animation: slideDown 9s infinite; 
+}
+
+/* Animations */
+@keyframes borderAnimation {
+  50% {border-color: #FFFFFF26;}
 }
 
 @keyframes slideUp {
